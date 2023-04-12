@@ -14,7 +14,7 @@ def test_parse_template():
         "It was a {Adjective} and {Adjective} {Noun}."
     )
     expected_stripped = "It was a {} and {} {}."
-    expected_parts = ["Adjective", "Adjective", "Noun"]
+    expected_parts = ("Adjective", "Adjective", "Noun")
 
     assert actual_stripped == expected_stripped
     assert actual_parts == expected_parts
