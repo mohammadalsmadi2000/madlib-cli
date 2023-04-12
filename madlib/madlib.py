@@ -31,5 +31,5 @@ def play_game():
     completed_madlib = merge(stripped_template, user_inputs)
     print(completed_madlib)
     write_completed_madlib(completed_madlib)
-
-play_game()
+if __name__=="__main__":
+  play_game()
