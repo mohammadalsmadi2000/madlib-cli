@@ -8,7 +8,8 @@ def read_template(file_path):
 def parse_template(template):
     stripped_template = re.sub(r"\{(.*?)\}", "{}", template) # replace all instances of curly braces {} containing any characters with just a pair of empty curly braces {}.
     parts = re.findall(r"\{(.*?)\}", template) # searches for all occurrences of { and } characters in the template string
-    return stripped_template, parts
+    return stripped_template,tuple(parts)
+                                   
 
 def get_user_inputs(parts):
     user_inputs = []
@@ -32,4 +33,4 @@ def play_game():
     print(completed_madlib)
     write_completed_madlib(completed_madlib)
 if __name__=="__main__":
-  play_game()
+    play_game() 
